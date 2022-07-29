@@ -1,0 +1,27 @@
+@media only screen and (max-width: 480px) {
+  .hamburger {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1em;
+  }
+  .hamburger .bar {
+    height: 5px;
+    background-color: black;
+    border-radius: 3px;
+    background-color: hsl(0deg, 0%, 24%);
+  }
+  .hamburger .bar1, .hamburger .bar3 {
+    width: 70%;
+  }
+  .hamburger .bar1 {
+    margin-left: auto;
+  }
+  .hamburger .bar3 {
+    margin-right: auto;
+  }
+}
+
+/*# sourceMappingURL=HamburgerMenu.css.map */

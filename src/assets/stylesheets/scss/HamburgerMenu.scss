@@ -1,0 +1,30 @@
+@use 'abstracts/colors';
+
+@media only screen and (max-width: 480px) {
+  .hamburger {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1em;
+
+    .bar {
+      height: 5px;
+      background-color: black;
+      border-radius: 3px;
+      background-color: colors.$dark-gray;
+    }
+
+    .bar1, .bar3 {
+      width: 70%;
+    }
+
+    .bar1 {
+      margin-left: auto;
+    }
+    .bar3 {
+      margin-right: auto;
+    }
+  }
+}
