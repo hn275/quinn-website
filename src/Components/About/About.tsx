@@ -2,7 +2,6 @@ import React from 'react';
 import "assets/stylesheets/css/About.css";
 
 const About = (): JSX.Element => {
-  // codes
   return (
     <section id="about">
       
