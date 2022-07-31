@@ -8,36 +8,27 @@
     --dimension: 20px;
     --height: 2px;
     cursor: pointer;
-    position: fixed;
-    right: var(--spacing);
-    top: 0.8em;
+    position: relative;
     width: var(--dimension);
     height: var(--dimension);
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
-    border-radius: 6px;
   }
   .hamburger .bar-wrapper {
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    top: 2px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+    justify-content: space-around;
   }
   .hamburger .bar-wrapper .bar {
-    background-color: hsl(0deg, 0%, 24%);
+    background-color: hsl(0deg, 0%, 15%);
     height: var(--height);
     border-radius: 4px;
   }
   .hamburger .bar-wrapper .bar1, .hamburger .bar-wrapper .bar3 {
-    width: 70%;
+    width: 60%;
   }
   .hamburger .bar-wrapper .bar1 {
     margin-left: auto;
@@ -60,7 +51,7 @@
   .hamburger .x-wrapper .stroke {
     height: var(--height);
     width: 100%;
-    background-color: hsl(0deg, 0%, 24%);
+    background-color: hsl(0deg, 0%, 15%);
     position: absolute;
     border-radius: 50%;
   }

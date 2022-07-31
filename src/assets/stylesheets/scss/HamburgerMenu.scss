@@ -11,29 +11,20 @@
     --height: 2px;
 
     cursor: pointer;
-    position: fixed;
-    right: var(--spacing);
-    top: 0.8em;
+    position: relative;
     width: var(--dimension);
     height: var(--dimension);
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
-    border-radius: 6px;
 
     // BARS
     .bar-wrapper {
-      width: 70%;
-      height: 70%;
+      width: 80%;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      position: absolute;
-      top: 2px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
+      justify-content: space-around;
 
       .bar {
         background-color: colors.$dark-gray;
@@ -41,7 +32,7 @@
         border-radius: 4px;
       }
       .bar1, .bar3 {
-        width: 70%;
+        width: 60%;
       }
       .bar1 {
         margin-left: auto;

@@ -8,7 +8,6 @@ import { ReactComponent as Logo } from 'assets/logo.svg';
 import 'assets/stylesheets/css/Header.css';
 
 const Header = (): JSX.Element => {
-  const [open, setOpen] = useState<boolean>(true);
 
   return (
 
@@ -18,8 +17,7 @@ const Header = (): JSX.Element => {
         <Logo />
       </div>
 
-      <HamburgerMenu isOpen={open} setOpen={setOpen}/>
-      <Navbar isOpen={open}/>
+      <Navbar />
 
     </header>
   );

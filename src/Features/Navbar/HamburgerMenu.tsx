@@ -1,6 +1,5 @@
 import { CSSTransition } from 'react-transition-group';
-import { useState, useEffect } from 'react';
-
+// Stylesheets
 import "assets/stylesheets/css/HamburgerMenu.css";
 
 interface HamburgerMenuPropTypes {
@@ -11,6 +10,7 @@ interface HamburgerMenuPropTypes {
 const HamburgerMenu: React.FC<HamburgerMenuPropTypes> = ({ isOpen, setOpen }): JSX.Element => {
 
   const timeout = 300; // CSSTransition timeout variable
+  // hamburger menu
   const menu = (): JSX.Element => {
     return (
       <CSSTransition
@@ -28,6 +28,7 @@ const HamburgerMenu: React.FC<HamburgerMenuPropTypes> = ({ isOpen, setOpen }): J
     );
   };
 
+  // x button to close hamburger menu
   const closeMenu = (): JSX.Element => {
     return (
       <CSSTransition
@@ -50,6 +51,10 @@ const HamburgerMenu: React.FC<HamburgerMenuPropTypes> = ({ isOpen, setOpen }): J
       role="button"
       onClick={() => setOpen(prevOpenState => !prevOpenState)}
     >
+      {/* two functions are called here 
+       but one is replaced by another 
+       as the user toggle the hamburger  
+       menu button in mobile size */}
       {closeMenu()} 
       {menu()}
     </div>
