@@ -1,7 +1,7 @@
 @use "abstracts/colors";
 @media only screen and (max-width: 480px) {
   .nav {
-    position: absolute;
+    position: fixed;
     top: 4rem;
     right: 1em;
     height: 30%;
@@ -38,7 +38,6 @@
                     opacity 250ms ease-in;
       }
     }
-// TODO: glass effect
     
   }
 }
