@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Navbar from 'Features/Navbar/Navbar';
 import HamburgerMenu from 'Features/Navbar/HamburgerMenu';
 // asssets
-import logo from 'assets/logo.svg';
+import { ReactComponent as Logo } from 'assets/logo.svg';
 import 'assets/stylesheets/css/Header.css';
 
 const Header = (): JSX.Element => {
@@ -13,12 +13,12 @@ const Header = (): JSX.Element => {
   return (
 
     <header>
-      <HamburgerMenu isOpen={open} setOpen={setOpen}/>
 
       <div className="logo">
-        <img src={logo} alt="logo" />
+        <Logo />
       </div>
 
+      <HamburgerMenu isOpen={open} setOpen={setOpen}/>
       <Navbar isOpen={open}/>
 
     </header>

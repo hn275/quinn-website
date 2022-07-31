@@ -13,14 +13,12 @@
     cursor: pointer;
     position: fixed;
     right: var(--spacing);
-    top: var(--spacing);
+    top: 0.8em;
     width: var(--dimension);
     height: var(--dimension);
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(5px);
-    background-color: hsla(0, 0%, 100%, 15%);
     border-radius: 6px;
 
     // BARS

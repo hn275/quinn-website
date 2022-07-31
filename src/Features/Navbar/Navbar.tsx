@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarPropTypes> = ({ isOpen }): JSX.Element => {
       for ( let i = 0; i < navItems.length; i++ ) {
         setTimeout((): void => {
           navItems[i].classList.remove("active");
-        }, 150 * i)
+        }, 150 * i);
       }
     }
     return // cleanup
@@ -28,9 +28,9 @@ const Navbar: React.FC<NavbarPropTypes> = ({ isOpen }): JSX.Element => {
   return (
     <nav className="nav">
       <ul className="nav-links">
-        <li className="nav-item"><a href="#">Home</a></li>
-        <li className="nav-item"><a href="#">Portfolio</a></li>
-        <li className="nav-item"><a href="#">About</a></li>
+        <li className="nav-item glass"><a href="#">Home</a></li>
+        <li className="nav-item glass"><a href="#">Portfolio</a></li>
+        <li className="nav-item glass"><a href="#">About</a></li>
       </ul>
       <div className="contact-button" role="button">
         Contact
