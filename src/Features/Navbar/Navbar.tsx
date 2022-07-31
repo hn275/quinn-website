@@ -1,18 +1,36 @@
 import React from 'react';
+import { useEffect } from 'react';
+import "assets/stylesheets/css/Header.css";
 
 interface NavbarPropTypes {
-  open: boolean;
+  isOpen: boolean;
 }
 
-const Navbar: React.FC<NavbarPropTypes> = ({ open }): JSX.Element => {
-  // codes
+const Navbar: React.FC<NavbarPropTypes> = ({ isOpen }): JSX.Element => {
+  useEffect(() => {
+    const navItems = document.getElementsByClassName("nav-item");
+    if (isOpen) {
+      for ( let i = 0; i < navItems.length; i++ ) {
+        setTimeout((): void => {
+          navItems[i].classList.add("active");
+        }, 150 * i)
+      }
+    } else {
+      for ( let i = 0; i < navItems.length; i++ ) {
+        setTimeout((): void => {
+          navItems[i].classList.remove("active");
+        }, 150 * i)
+      }
+    }
+    return // cleanup
+  }, [isOpen])
   const navLinks = (): JSX.Element => {
     return (
       <>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About</a></li>
+          <li className="nav-item"><a href="#">Home</a></li>
+          <li className="nav-item"><a href="#">Portfolio</a></li>
+          <li className="nav-item"><a href="#">About</a></li>
         </ul>
         <div className="contact-button" role="button">
           Contact
@@ -23,7 +41,7 @@ const Navbar: React.FC<NavbarPropTypes> = ({ open }): JSX.Element => {
 
   return (
     <nav className="nav">
-      {open && navLinks()}
+      {navLinks()}
     </nav>
   );
 };

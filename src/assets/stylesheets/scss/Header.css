@@ -16,24 +16,14 @@
     align-items: flex-end;
     flex-grow: 0.5;
   }
-  .nav ul .nav-item {
+  .nav ul li {
     overflow: hidden;
-    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0px 0px 2000px rgba(255, 255, 255, 0.7);
     border-radius: 20px;
     padding: 10px;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: transform 250ms ease-out, opacity 250ms ease-out;
-  }
-  .nav ul .nav-item a {
-    text-decoration: none;
-    color: hsl(0deg, 0%, 24%);
-  }
-  .nav ul .nav-item.active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: transform 250ms ease-in, opacity 250ms ease-in;
   }
 }
+/*# sourceMappingURL=Header.css.map */
 
 /*# sourceMappingURL=Header.css.map */

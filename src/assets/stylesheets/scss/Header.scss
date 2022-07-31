@@ -1,3 +1,4 @@
+@use "abstracts/colors";
 @media only screen and (max-width: 480px) {
   .nav {
     position: absolute;
@@ -15,12 +16,26 @@
       align-items: flex-end;
       flex-grow: 0.5;
 
-      li {
+      .nav-item {
         overflow: hidden;
-        background-color: rgba(255, 255, 255 ,0.7);
-        box-shadow: inset 0px 0px 2000px rgba(255, 255, 255 ,0.7);
+        backdrop-filter: blur(2px);
         border-radius: 20px;
         padding: 10px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: transform 250ms ease-out,
+                    opacity 250ms ease-out;
+        
+        a {
+          text-decoration: none;
+          color: colors.$dark-gray;
+        }
+      }
+      .nav-item.active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: transform 250ms ease-in,
+                    opacity 250ms ease-in;
       }
     }
 // TODO: glass effect

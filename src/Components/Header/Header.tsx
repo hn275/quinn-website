@@ -12,13 +12,13 @@ const Header = (): JSX.Element => {
   return (
 
     <header>
-      <HamburgerMenu />
+      <HamburgerMenu isOpen={open} setOpen={setOpen}/>
 
       <div className="logo">
         <img src={logo} alt="logo" />
       </div>
 
-      <Navbar open={open}/>
+      <Navbar isOpen={open}/>
     </header>
   );
 };
