@@ -1,8 +1,8 @@
 import 'assets/stylesheets/css/App.css';
 // Components
 import Header from 'Components/Header/Header';
-import Hero from 'Components/Hero/Hero';
 import About from 'Components/About/About';
+import Hero from 'Components/Hero/Hero';
 
 function App() {
   return (
@@ -10,7 +10,6 @@ function App() {
       <Header />
 
       <main>
-
         {/* Hero section */}
         <Hero />
 

@@ -24,24 +24,17 @@ const Navbar: React.FC<NavbarPropTypes> = ({ isOpen }): JSX.Element => {
     }
     return // cleanup
   }, [isOpen])
-  const navLinks = (): JSX.Element => {
-    return (
-      <>
-        <ul>
-          <li className="nav-item"><a href="#">Home</a></li>
-          <li className="nav-item"><a href="#">Portfolio</a></li>
-          <li className="nav-item"><a href="#">About</a></li>
-        </ul>
-        <div className="contact-button" role="button">
-          Contact
-        </div>
-      </>
-    );
-  }
 
   return (
     <nav className="nav">
-      {navLinks()}
+      <ul className="nav-links">
+        <li className="nav-item"><a href="#">Home</a></li>
+        <li className="nav-item"><a href="#">Portfolio</a></li>
+        <li className="nav-item"><a href="#">About</a></li>
+      </ul>
+      <div className="contact-button" role="button">
+        Contact
+      </div>
     </nav>
   );
 };
