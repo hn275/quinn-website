@@ -8,9 +8,6 @@
 # testing
 /coverage
 
-# scss
-/src/assets/stylesheets/scss
-
 # production
 /build
 
