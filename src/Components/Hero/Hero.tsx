@@ -1,5 +1,6 @@
 import { BsChevronRight } from 'react-icons/bs';
 import banner from 'assets/pictures/compressed/Quinn_whiteshirt_compressed.jpg';
+import "assets/stylesheets/css/Header.css";
 
 const Hero = (): JSX.Element => {
   // codes
@@ -24,12 +25,12 @@ const Hero = (): JSX.Element => {
         </div>
 
         <aside>
-          <div className="portfolio-link" role="navigation">
-            View some of his work <a href="#portfolio">here</a>
-            <span>
-              <BsChevronRight />
-            </span>
-          </div>
+            <a href="#portfolio" className="portfolio-link">
+            View some of his work 
+              <span className="right-chev">
+                <BsChevronRight />
+              </span>
+            </a>
         </aside>
 
       </article>

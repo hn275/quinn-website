@@ -158,20 +158,30 @@ nav .nav-links {
     display: grid;
     place-items: center;
     height: calc(100vh - 80px);
+    position: relative;
     grid-template-columns: 1fr 60%;
     grid-template-areas: "text hero";
+  }
+  #hero .portfolio-link {
+    text-decoration: none;
+    color: hsl(0deg, 0%, 15%);
     position: relative;
+    overflow: hidden;
+  }
+  #hero .portfolio-link .right-chev {
+    position: relative;
+    transition: all 200ms 100ms ease-out;
+  }
+  #hero .portfolio-link:hover .right-chev {
+    left: 12px;
   }
   #hero .hero-picture {
     grid-area: hero;
-    position: absolute;
-    bottom: -7px;
     width: 100%;
-    overflow: hidden;
-    border-radius: 160px 0 0 0;
   }
   #hero .hero-picture img {
     width: 100%;
+    border-radius: 0px 160px 160px 0px;
   }
   #hero article {
     grid-area: text;

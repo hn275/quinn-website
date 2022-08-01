@@ -9,7 +9,7 @@ const Header = (): JSX.Element => {
 
   return (
 
-    <header>
+    <header id="home">
 
       <div className="logo">
         <Logo />

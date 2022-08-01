@@ -4,6 +4,8 @@
   width: 100%;
   line-height: 1.4;
   font-size: 18px;
+  scroll-behavior: smooth;
+  top: 80px;
 }
 
 @media only screen and (max-width: 480px) {

@@ -32,7 +32,7 @@ header {
     height: 1px;
     background-color: colors.$dark-gray;
     transform: scaleX(0);
-    transition: transform $transition-time ease; 
+    transition: transform $transition-time ease;
   }
   a:hover, a.focus {
     color: colors.$dark-gray;
@@ -89,7 +89,7 @@ nav {
 }
 
 
-/* HEADER */ 
+/* HEADER */
 #hero {
   width: 100%;
   height: auto;
@@ -148,7 +148,7 @@ nav {
 /*     position: absolute; */
 /*     bottom: -7px; // NOTE: offset 7px to align with the bottom of the screen */
 /*     right: 0px; */
-/*     overflow: hidden; */ 
+/*     overflow: hidden; */
 /*     border-radius: 170px 0 0 0; */
 /*     height: calc(100vh - $navHeight - 50px); // 100px offset from navHeight */
 /*   img { */
@@ -169,26 +169,41 @@ nav {
     display: grid;
     place-items: center;
     height: calc(100vh - $navHeight);
-    grid-template-columns: 1fr 60%;
-    grid-template-areas: "text hero";
     position: relative;
-    .hero-picture {
-      grid-area: hero;
-      position: absolute;
-      bottom: -7px; // align to the bottom border
-      width: 100%;
+    grid-template-columns: 1fr 60%; // TODO: change this for the bigger screen size
+    grid-template-areas: "text hero";
+
+    .portfolio-link {
+      text-decoration: none;
+      color: colors.$dark-gray;
+      position: relative;
       overflow: hidden;
-      border-radius: 160px 0 0 0; // NOTE: delete to show quinn square design
-      img {
-        width: 100%;
+
+      .right-chev {
+        position: relative;
+        transition: all 200ms 100ms ease-out;
+      }
+
+      &:hover .right-chev {
+        left: 12px;
       }
     }
 
-    article {
-      grid-area: text;
-    }
+    .hero-picture {
+      grid-area: hero;
+      width: 100%;
+      // overflow: hidden;
+      img {
+        width: 100%;
+        border-radius: 0px 160px 160px 0px; // NOTE: delete to show quinn square design
+      }
   }
-} 
+
+  article {
+    grid-area: text;
+  }
+}
+}
 /* TABLET SCREEN */
 @media only screen and (max-width: 768px) {
   nav {
@@ -237,13 +252,13 @@ nav {
       opacity: 0;
       transform: translateY(-10px);
       transition: transform 250ms ease-out,
-                  opacity 250ms ease-out;
+        opacity 250ms ease-out;
     }
     .nav-item.active {
       opacity: 1;
       transform: translateY(0);
       transition: transform 250ms ease-in,
-                  opacity 250ms ease-in;
+        opacity 250ms ease-in;
     }
   }
   /* Header */
