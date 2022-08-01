@@ -22,53 +22,38 @@ const Navbar = (): JSX.Element => {
     }
   }, [open]);
 
-  // accessing a tag to style active state
-  useEffect(() => {
+  // Handle click for anchor tags
+  const handleClick = (event: any): void => {
     /**
-      * when user click it should remove the 
-      * `active` className from the current a tag 
-      * then add the `active` class name to the 
-      * selected tags
+      * @param {event} event: selected anchor tag
+      * adding `active` class to selected element
       */
-
-    const handleMouseDown = (event: React.ChangeEvent<HTMLAnchorElement>):void => {
-      /**
-        * @param {event} event: selected anchor tag
-        * adding `active` class to selected element
-        */
-      event.target.classList.add("active");
-    };
     // current active tag
-    const activeTag: any | null = document.querySelector(".nav-item a.active"); // BUG: type Element | null doesnt work???
+    const activeTag: Element | null = document.getElementsByClassName("focus")[0];
     // removing `active` class from the activeTag
-    activeTag?.classList.remove('active');
-    
-    const anchorTags = Array.from(document.querySelectorAll(".nav-item a"));
-    // for ( let i = 0; i < anchorTags.length; i++ ) {
-    //   anchorTags[i].addEventListener("click", handleMouseDown);
-    // }
-    // TODO : finish this useEffect
-
-  })
+    activeTag?.classList.remove("focus");
+    // adding active class to the right tag
+    event.target.classList.add("focus");
+  };
 
   return (
     <nav className="nav">
 
       <ul className="nav-links">
         <li className="nav-item">
-          <a href="#">
+          <a href="#" onClick={handleClick}>
             <div className="has-focus"></div>
             Home
           </a>
         </li>
         <li className="nav-item">
-          <a href="#">
+          <a href="#" onClick={handleClick}>
             <div className="has-focus"></div>
             Portfolio
           </a>
         </li>
         <li className="nav-item">
-          <a href="#">
+          <a href="#" onClick={handleClick}>
             <div className="has-focus"></div>
             About
           </a>

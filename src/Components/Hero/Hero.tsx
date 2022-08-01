@@ -5,19 +5,35 @@ const Hero = (): JSX.Element => {
   // codes
   return (
     <section id="hero">
+      
       <div className="hero-picture" role="hero">
-        <img style={{width: "100vw"}} src={banner} alt="Quinn" />
+        <img src={banner} alt="Quinn" />
       </div>
+        
       <article>
-        <h1>Quinn Dawson</h1> is a thingOne and a thingTwo here
-        <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
-        <div className="portfolio-links" role="navigation">
-          View some of his work <a href="#">here</a>
-          <span>
-            <BsChevronRight />
-          </span>
+
+        <div className="heading">
+          <h1>Quinn Dawson</h1> is a thingOne and a thingTwo here
         </div>
+
+        <div className="introduction">
+          <p>
+            A really quick description would go here
+            Consectetur quia repudiandae explicabo nobis suscipit. Libero sunt porro istek
+          </p>
+        </div>
+
+        <aside>
+          <div className="portfolio-link" role="navigation">
+            View some of his work <a href="#">here</a>
+            <span>
+              <BsChevronRight />
+            </span>
+          </div>
+        </aside>
+
       </article>
+        
     </section>
   );
 };
