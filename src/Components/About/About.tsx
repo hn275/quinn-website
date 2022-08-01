@@ -1,5 +1,5 @@
-import React from 'react';
-import "assets/stylesheets/css/About.css";
+// import React from 'react';
+// import "assets/stylesheets/css/About.css";
 
 const About = (): JSX.Element => {
   return (

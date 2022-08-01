@@ -6,7 +6,7 @@ const Hero = (): JSX.Element => {
   return (
     <section id="hero">
       
-      <div className="hero-picture" role="hero">
+      <div className="hero-picture">
         <img src={banner} alt="Quinn" />
       </div>
         
@@ -25,7 +25,7 @@ const Hero = (): JSX.Element => {
 
         <aside>
           <div className="portfolio-link" role="navigation">
-            View some of his work <a href="#">here</a>
+            View some of his work <a href="#portfolio">here</a>
             <span>
               <BsChevronRight />
             </span>
