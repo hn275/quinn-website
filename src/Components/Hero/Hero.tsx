@@ -6,11 +6,11 @@ const Hero = (): JSX.Element => {
   // codes
   return (
     <section id="hero">
-      
+
       <div className="hero-picture">
         <img src={banner} alt="Quinn" />
       </div>
-        
+
       <article>
 
         <div className="heading">
@@ -25,18 +25,20 @@ const Hero = (): JSX.Element => {
         </div>
 
         <aside>
-            <a href="#portfolio" className="portfolio-link">
-            View some of his work 
-              <span className="right-chev">
-                <BsChevronRight />
-              </span>
-            </a>
+          View some of his work&nbsp;
+          <a href="#portfolio" className="portfolio-link">
+            <span>here</span>
+            <span className="right-chev">
+              <BsChevronRight />
+            </span>
+          </a>
         </aside>
 
       </article>
-        
+
     </section>
   );
 };
 
 export default Hero;
+

@@ -12,7 +12,7 @@ header {
   height: $navHeight;
   position: sticky;
   top: 0;
-  padding: 0 1rem;
+  padding: 0 1em;
   z-index: 10;
 
   $transition-time: 250ms;
@@ -67,9 +67,8 @@ header::after {
   text-align: center;
   background: linear-gradient( 90deg, colors.$dark-gray 40%, colors.$red-ish ); // TODO: change this gradient color to match the dark part of the logo
   color: hsl(0deg, 0%, 100%);
-  padding: 8px;
-  border-radius: 20px;
-  width: 90px;
+  padding: 8px 12px;
+  border-radius: 23px;
   margin-left: 2em;
 }
 
@@ -93,6 +92,18 @@ nav {
 #hero {
   width: 100%;
   height: auto;
+  aside {
+    color: colors.$dark-gray;
+    .portfolio-link {
+      display: inline-block;
+      position: relative;
+      svg {
+        position: relative;
+        top: 4px;
+        color: colors.$dark-gray;
+      }
+    }
+  }
   img {
     transform: scaleX(-1);
     width: 100%;
@@ -105,27 +116,16 @@ nav {
   }
   article {
     height: 14em;
-    max-width: 42ch;
     padding: 1em;
     margin: 0 auto;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    max-width: 65ch;
   }
   p {
     margin: 1em 0 ;
-  }
-  .portfolio-link {
-    a {
-      color: colors.$dark-gray; // TODO: linear gradrient color here?
-      font-style: italic;
-    }
-    span {
-      position: relative;
-      top: 4px;
-      left: 4px;
-    }
   }
 }
 
@@ -172,40 +172,37 @@ nav {
     position: relative;
     grid-template-columns: 1fr 60%; // TODO: change this for the bigger screen size
     grid-template-areas: "text hero";
-
-    .portfolio-link {
-      text-decoration: none;
-      color: colors.$dark-gray;
-      position: relative;
-      overflow: hidden;
-
-      .right-chev {
-        position: relative;
-        transition: all 200ms 100ms ease-out;
-      }
-
-      &:hover .right-chev {
-        left: 12px;
-      }
+    .right-chev {
+      display: inline-block;
+      transition: all 200ms 100ms ease-out;
     }
-
-    .hero-picture {
-      grid-area: hero;
-      width: 100%;
-      // overflow: hidden;
-      img {
-        width: 100%;
-        border-radius: 0px 160px 160px 0px; // NOTE: delete to show quinn square design
-      }
+    .portfolio-link:hover .right-chev {
+      transform: translateX(6px);
+    }
   }
-
+  .hero-picture {
+    grid-area: hero;
+    width: 100%;
+    // overflow: hidden;
+    img {
+      width: 100%;
+      border-radius: 0px 160px 160px 0px; // NOTE: delete to show quinn square design
+    }
+  }
   article {
     grid-area: text;
+    max-width: 45ch;
+    margin-left: 2em !important;
   }
 }
-}
+
 /* TABLET SCREEN */
 @media only screen and (max-width: 768px) {
+  #hero {
+    article {
+      width: 65ch;
+    }
+  }
   nav {
     gap: 1em;
   }
@@ -232,10 +229,10 @@ nav {
   }
   .nav-links {
     position: absolute;
-    top: calc(#{$navHeight} + 0.5rem); // 60px is the height of the header and nav bar
+    top: calc(#{$navHeight} + 0.9rem); // 60px is the height of the header and nav bar
     right: 0.5em;
-    height: 140px;
     display: flex;
+    gap: 1em;
     flex-flow: column nowrap;
     flex-direction: column;
     justify-content: space-around;
@@ -250,11 +247,13 @@ nav {
       border-radius: 26px;
       padding: 8px 14px;
       opacity: 0;
+      pointer-events: none;
       transform: translateY(-10px);
       transition: transform 250ms ease-out,
         opacity 250ms ease-out;
     }
     .nav-item.active {
+      pointer-events: auto;
       opacity: 1;
       transform: translateY(0);
       transition: transform 250ms ease-in,
