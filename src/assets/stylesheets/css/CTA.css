@@ -1,0 +1,48 @@
+#CTA {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+  line-height: 2;
+  font-size: 1.2em;
+}
+#CTA h2 {
+  font-weight: 700;
+  font-size: 1.3em;
+  color: hsl(0deg, 0%, 15%);
+}
+#CTA p {
+  color: hsl(0deg, 0%, 28%);
+  font-weight: 500;
+}
+#CTA .icon-container {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 1em;
+}
+#CTA .icon {
+  cursor: pointer;
+}
+#CTA svg {
+  color: hsl(0deg, 0%, 35%);
+  width: 2.5rem;
+  height: 2.5rem;
+}
+#CTA .mail svg {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+@media only screen and (min-width: 770px) and (orientation: landscape) {
+  #CTA svg {
+    color: hsl(0deg, 0%, 50%);
+    transition: color 250ms linear;
+  }
+  #CTA .icon:hover svg {
+    color: hsl(0deg, 0%, 28%);
+  }
+}
+
+/*# sourceMappingURL=CTA.css.map */

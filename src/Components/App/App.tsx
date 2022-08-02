@@ -3,6 +3,7 @@ import 'assets/stylesheets/css/App.css';
 import Header from 'Components/Header/Header';
 import About from 'Components/About/About';
 import Hero from 'Components/Hero/Hero';
+import CTA from 'Components/CTA/CTA';
 
 function App() {
   return (
@@ -13,8 +14,12 @@ function App() {
         {/* Hero section */}
         <Hero />
 
+        {/* CTA */} 
+        <CTA />
+
         {/* About section */}
         <About />
+
 
       </main>
 

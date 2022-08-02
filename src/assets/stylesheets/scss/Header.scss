@@ -65,7 +65,7 @@ header::after {
 .contact-button {
   cursor: pointer;
   text-align: center;
-  background: linear-gradient( 90deg, colors.$dark-gray 40%, colors.$red-ish ); // TODO: change this gradient color to match the dark part of the logo
+  background: linear-gradient( 90deg, hsl(0deg, 0%, 30%) 40%, hsl(10deg, 49%, 61%) ); // TODO: change this gradient color to match the dark part of the logo
   color: hsl(0deg, 0%, 100%);
   padding: 8px 12px;
   border-radius: 23px;

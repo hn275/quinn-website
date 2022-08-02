@@ -60,7 +60,7 @@ header::after {
 .contact-button {
   cursor: pointer;
   text-align: center;
-  background: linear-gradient(90deg, hsl(0deg, 0%, 15%) 40%, hsl(10deg, 39%, 56%));
+  background: linear-gradient(90deg, hsl(0deg, 0%, 30%) 40%, hsl(10deg, 49%, 61%));
   color: hsl(0deg, 0%, 100%);
   padding: 8px 12px;
   border-radius: 23px;
