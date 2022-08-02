@@ -1,5 +1,5 @@
 import { BsChevronRight } from 'react-icons/bs';
-import banner from 'assets/pictures/compressed/Quinn_whiteshirt_compressed.jpg';
+import images from 'assets/pictures/images';
 import "assets/stylesheets/css/Header.css";
 
 const Hero = (): JSX.Element => {
@@ -8,7 +8,7 @@ const Hero = (): JSX.Element => {
     <section id="hero">
 
       <div className="hero-picture">
-        <img src={banner} alt="Quinn" />
+        <img src={images.hero} alt="Quinn" />
       </div>
 
       <article>
