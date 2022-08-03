@@ -8,7 +8,7 @@ const Hero = (): JSX.Element => {
     <section id="hero">
 
       <div className="hero-picture">
-        <img src={images.hero} alt="Quinn" />
+        <img src={images.stocks.hero} alt="Quinn" />
       </div>
 
       <article>

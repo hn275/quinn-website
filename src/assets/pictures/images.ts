@@ -1,5 +1,6 @@
-// Hero
-import hero from './hero/hero.jpg';
+// Stocks 
+import hero from './stocks/hero.jpg';
+import about from './stocks/about.jpg';
 // Event 1
 // Vertical images
 import e1Vert1 from './event1/vertical/vert_1.jpg';
@@ -14,7 +15,10 @@ import e1Hor4 from './event1/horizontal/hor_4.jpg';
 import e1Hor5 from './event1/horizontal/hor_5.jpg';
 
 export default {
-    hero: hero,
+    stocks: {
+        hero: hero,
+        about: about
+    },
     event1: {
         vertical: {
             vert1: e1Vert1,

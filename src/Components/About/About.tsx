@@ -1,9 +1,12 @@
-// import React from 'react';
-// import "assets/stylesheets/css/About.css";
+import "assets/stylesheets/css/About.css";
+import images from 'assets/pictures/images';
 
 const About = (): JSX.Element => {
   return (
     <section id="about">
+      <div className="about-img">
+        <img src={images.stocks.about} alt="" />
+      </div>
       
       <article>
         <h2>About Quinn</h2>

@@ -6,6 +6,8 @@
   font-size: 18px;
   scroll-behavior: smooth;
   top: 80px;
+  margin: 0;
+  padding: 0;
 }
 
 @media only screen and (max-width: 480px) {
