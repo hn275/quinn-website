@@ -1,6 +1,7 @@
 @use "abstracts/colors";
 
 #about {
+  overflow: hidden;
   height: 100%;
   h2 {
     margin-bottom: 0.4em;
@@ -9,6 +10,7 @@
   }
   img {
     width: 100%;
+    transform: scale(1.03);
   }
   article {
     padding: 1em;

@@ -1,0 +1,21 @@
+#footer {
+  background-color: hsl(0deg, 0%, 15%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: hsl(0deg, 0%, 65%);
+  padding: 1em;
+}
+#footer .tag-handle, #footer .icons {
+  display: grid;
+  place-items: center;
+}
+#footer .tag-handle {
+  font-size: 0.8em;
+}
+#footer .icons {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4px;
+}
+
+/*# sourceMappingURL=Footer.css.map */

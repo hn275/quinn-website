@@ -1,4 +1,5 @@
 #about {
+  overflow: hidden;
   height: 100%;
 }
 #about h2 {
@@ -8,6 +9,7 @@
 }
 #about img {
   width: 100%;
+  transform: scale(1.03);
 }
 #about article {
   padding: 1em;

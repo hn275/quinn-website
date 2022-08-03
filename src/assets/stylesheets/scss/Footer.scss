@@ -1,0 +1,22 @@
+@use "abstracts/colors";
+$offWhite: hsl(0deg, 0%, 65%);
+
+#footer {
+  background-color: colors.$dark-gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $offWhite;
+  padding: 1em;
+  .tag-handle, .icons {
+    display: grid;
+    place-items: center;
+  }
+  .tag-handle {
+    font-size: 0.8em;
+  }
+  .icons {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4px;
+  }
+}

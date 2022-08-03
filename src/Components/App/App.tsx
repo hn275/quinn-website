@@ -4,6 +4,7 @@ import Header from 'Components/Header/Header';
 import About from 'Components/About/About';
 import Hero from 'Components/Hero/Hero';
 import CTA from 'Components/CTA/CTA';
+import Footer from 'Components/Footer/Footer';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         {/* About section */}
         <About />
 
+        {/* Footer section */}
+        <Footer />
 
       </main>
 
