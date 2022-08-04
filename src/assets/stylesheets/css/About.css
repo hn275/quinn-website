@@ -1,40 +1,40 @@
 #about {
-  overflow: hidden;
-  height: 100%;
+    overflow: hidden;
+    height: 100%;
 }
 #about h2 {
-  margin-bottom: 0.4em;
-  font-weight: 700;
-  font-size: 1.2em;
+    margin-bottom: 0.4em;
+    font-weight: 700;
+    font-size: 1.2em;
 }
 #about img {
-  width: 100%;
-  transform: scale(1.03);
+    width: 100%;
+    transform: scale(1.03);
 }
 #about article {
-  padding: 1em;
+    padding: 1em;
 }
 
 @media only screen and (min-width: 580px) {
-  #about {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    isolation: isolate;
-  }
-  #about article {
-    position: absolute;
-    top: 50%;
-    left: 2em;
-    transform: translateY(-50%);
-    color: hsl(0deg, 0%, 15%);
-    width: 55%;
-    background-color: hsla(0deg, 0%, 100%, 0.4);
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-    box-shadow: 2px 4px 5px hsla(0deg, 0%, 40%, 0.25);
-  }
+    #about {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        isolation: isolate;
+    }
+    #about article {
+        position: absolute;
+        top: 50%;
+        left: 2em;
+        transform: translateY(-50%);
+        color: hsl(0deg, 0%, 15%);
+        width: 55%;
+        background-color: hsla(0deg, 0%, 100%, 0.4);
+        backdrop-filter: blur(5px);
+        border-radius: 15px;
+        box-shadow: 2px 4px 5px hsla(0deg, 0%, 40%, 0.25);
+    }
 }
 
 /*# sourceMappingURL=About.css.map */

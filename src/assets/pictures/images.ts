@@ -1,4 +1,4 @@
-// Stocks 
+// Stocks
 import hero from './stocks/hero.jpg';
 import about from './stocks/about.jpg';
 // Event 1
@@ -14,10 +14,10 @@ import e1Hor3 from './event1/horizontal/hor_3.jpg';
 import e1Hor4 from './event1/horizontal/hor_4.jpg';
 import e1Hor5 from './event1/horizontal/hor_5.jpg';
 
-export default {
+const images = {
     stocks: {
         hero: hero,
-        about: about
+        about: about,
     },
     event1: {
         vertical: {
@@ -34,4 +34,6 @@ export default {
             hor5: e1Hor5,
         },
     },
-}
+};
+
+export default images;

@@ -7,27 +7,25 @@ import CTA from 'Components/CTA/CTA';
 import Footer from 'Components/Footer/Footer';
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
+    return (
+        <div className="App">
+            <Header />
 
-      <main>
-        {/* Hero section */}
-        <Hero />
+            <main>
+                {/* Hero section */}
+                <Hero />
 
-        {/* CTA */} 
-        <CTA />
+                {/* CTA */}
+                <CTA />
 
-        {/* About section */}
-        <About />
+                {/* About section */}
+                <About />
 
-        {/* Footer section */}
-        <Footer />
-
-      </main>
-
-    </div>
-  );
+                {/* Footer section */}
+                <Footer />
+            </main>
+        </div>
+    );
 }
 
 export default App;
