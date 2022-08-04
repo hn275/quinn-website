@@ -29,10 +29,12 @@ header a .has-focus {
   transform: scaleX(0);
   transition: transform 250ms ease;
 }
-header a:hover, header a.focus {
+header a:hover,
+header a.focus {
   color: hsl(0deg, 0%, 15%);
 }
-header a:hover .has-focus, header a.focus .has-focus {
+header a:hover .has-focus,
+header a.focus .has-focus {
   transform: scaleX(1);
 }
 
@@ -174,6 +176,8 @@ nav .nav-links {
   .hero-picture {
     grid-area: hero;
     width: 100%;
+    height: auto;
+    overflow: hidden;
   }
   .hero-picture img {
     width: 100%;
@@ -210,7 +214,9 @@ nav .nav-links {
   }
   .nav-links {
     position: absolute;
-    top: calc(50px + 0.9rem);
+    top: calc(
+            50px + 0.9rem
+        );
     right: 0.5em;
     display: flex;
     gap: 1em;

@@ -1,134 +1,137 @@
-@use "abstracts/colors";
+@use 'abstracts/colors';
 // Imported to Header.tsx and Navbar.tsx
 
 $navHeight: 80px; // to be overwritten in smaller screen size
 header {
-  position: relative;
-  isolation: isolate;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  height: $navHeight;
-  position: sticky;
-  top: 0;
-  padding: 0 1em;
-  z-index: 10;
-
-  $transition-time: 250ms;
-  a {
-    text-decoration: none;
-    color: colors.$lighter-gray;
-    transition: all $transition-time ease-in;
     position: relative;
-    overflow: hidden;
-  }
-  a .has-focus {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: colors.$dark-gray;
-    transform: scaleX(0);
-    transition: transform $transition-time ease;
-  }
-  a:hover, a.focus {
-    color: colors.$dark-gray;
-  }
-  a:hover .has-focus, a.focus .has-focus {
-    transform: scaleX(1);
-  }
+    isolation: isolate;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: $navHeight;
+    position: sticky;
+    top: 0;
+    padding: 0 1em;
+    z-index: 10;
+
+    $transition-time: 250ms;
+    a {
+        text-decoration: none;
+        color: colors.$lighter-gray;
+        transition: all $transition-time ease-in;
+        position: relative;
+        overflow: hidden;
+    }
+    a .has-focus {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: colors.$dark-gray;
+        transform: scaleX(0);
+        transition: transform $transition-time ease;
+    }
+    a:hover,
+    a.focus {
+        color: colors.$dark-gray;
+    }
+    a:hover .has-focus,
+    a.focus .has-focus {
+        transform: scaleX(1);
+    }
 }
 header::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: colors.$white-transparent;
-  backdrop-filter: blur(5px);
-  z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: colors.$white-transparent;
+    backdrop-filter: blur(5px);
+    z-index: -1;
 }
 
 .logo {
-  cursor: pointer;
-  overflow: hidden;
-  svg {
-    width: 130px;
-    height: 100%;
-    // transform: scale(2);
-  }
+    cursor: pointer;
+    overflow: hidden;
+    svg {
+        width: 130px;
+        height: 100%;
+        // transform: scale(2);
+    }
 }
 .contact-button {
-  cursor: pointer;
-  text-align: center;
-  background: linear-gradient( 90deg, hsl(0deg, 0%, 30%) 40%, hsl(10deg, 49%, 61%) ); // TODO: change this gradient color to match the dark part of the logo
-  color: hsl(0deg, 0%, 100%);
-  padding: 8px 12px;
-  border-radius: 23px;
-  margin-left: 2em;
+    cursor: pointer;
+    text-align: center;
+    background: linear-gradient(
+        90deg,
+        hsl(0deg, 0%, 30%) 40%,
+        hsl(10deg, 49%, 61%)
+    ); // TODO: change this gradient color to match the dark part of the logo
+    color: hsl(0deg, 0%, 100%);
+    padding: 8px 12px;
+    border-radius: 23px;
+    margin-left: 2em;
 }
 
 nav {
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5em;
-  flex-grow: 0.4;
-  .nav-links {
-    width: 70%;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
-
-  }
+    align-items: center;
+    gap: 5em;
+    flex-grow: 0.4;
+    .nav-links {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+    }
 }
-
 
 /* HEADER */
 #hero {
-  width: 100%;
-  height: auto;
-  aside {
-    color: colors.$dark-gray;
-    .portfolio-link {
-      display: inline-block;
-      position: relative;
-      svg {
-        position: relative;
-        top: 4px;
-        color: colors.$dark-gray;
-      }
-    }
-  }
-  img {
-    transform: scaleX(-1);
     width: 100%;
-    object-fit: fill;
-  }
-  h1 {
-    font-weight: 700;
-    font-size: 1.5em;
-    display: inline-block;
-  }
-  article {
-    height: 14em;
-    padding: 1em;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 65ch;
-  }
-  p {
-    margin: 1em 0 ;
-  }
+    height: auto;
+    aside {
+        color: colors.$dark-gray;
+        .portfolio-link {
+            display: inline-block;
+            position: relative;
+            svg {
+                position: relative;
+                top: 4px;
+                color: colors.$dark-gray;
+            }
+        }
+    }
+    img {
+        transform: scaleX(-1);
+        width: 100%;
+        object-fit: fill;
+    }
+    h1 {
+        font-weight: 700;
+        font-size: 1.5em;
+        display: inline-block;
+    }
+    article {
+        height: 14em;
+        padding: 1em;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 65ch;
+    }
+    p {
+        margin: 1em 0;
+    }
 }
-
 
 /* MEDIA QUERY */
 /* /1* DESKTOP *1/ */
@@ -165,105 +168,106 @@ nav {
 /* } */
 /* LAPTOP */
 @media only screen and (min-width: 769px) and (orientation: landscape) {
-  #hero {
-    display: grid;
-    place-items: center;
-    height: calc(100vh - $navHeight);
-    position: relative;
-    grid-template-columns: 1fr 60%; // TODO: change this for the bigger screen size
-    grid-template-areas: "text hero";
-    .right-chev {
-      display: inline-block;
-      transition: all 200ms 100ms ease-out;
+    #hero {
+        display: grid;
+        place-items: center;
+        height: calc(100vh - $navHeight);
+        position: relative;
+        grid-template-columns: 1fr 60%; // TODO: change this for the bigger screen size
+        grid-template-areas: 'text hero';
+        .right-chev {
+            display: inline-block;
+            transition: all 200ms 100ms ease-out;
+        }
+        .portfolio-link:hover .right-chev {
+            transform: translateX(6px);
+        }
     }
-    .portfolio-link:hover .right-chev {
-      transform: translateX(6px);
+    .hero-picture {
+        grid-area: hero;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        img {
+            width: 100%;
+            border-radius: 0px 160px 160px 0px; // NOTE: delete to show quinn square design
+        }
     }
-  }
-  .hero-picture {
-    grid-area: hero;
-    width: 100%;
-    // overflow: hidden;
-    img {
-      width: 100%;
-      border-radius: 0px 160px 160px 0px; // NOTE: delete to show quinn square design
+    article {
+        grid-area: text;
+        max-width: 45ch;
+        margin-left: 2em !important;
     }
-  }
-  article {
-    grid-area: text;
-    max-width: 45ch;
-    margin-left: 2em !important;
-  }
 }
 
 /* TABLET SCREEN */
 @media only screen and (max-width: 768px) {
-  #hero {
-    article {
-      width: 65ch;
+    #hero {
+        article {
+            width: 65ch;
+        }
     }
-  }
-  nav {
-    gap: 1em;
-  }
+    nav {
+        gap: 1em;
+    }
 }
 
 /*  MOBILE SCREEN */
 @media only screen and (max-width: 480px) {
-  /* Nav */
-  $navHeight: 50px;
-  header {
-    height: $navHeight;
-    .logo {
-      svg {
-        width: 80px;
-      }
+    /* Nav */
+    $navHeight: 50px;
+    header {
+        height: $navHeight;
+        .logo {
+            svg {
+                width: 80px;
+            }
+        }
     }
-  }
-  nav {
-    .contact-button {
-      width: 85px;
-      margin-left: auto;
-      margin-right: 17px;
+    nav {
+        .contact-button {
+            width: 85px;
+            margin-left: auto;
+            margin-right: 17px;
+        }
     }
-  }
-  .nav-links {
-    position: absolute;
-    top: calc(#{$navHeight} + 0.9rem); // 60px is the height of the header and nav bar
-    right: 0.5em;
-    display: flex;
-    gap: 1em;
-    flex-flow: column nowrap;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end;
-    flex-grow: 0.5;
+    .nav-links {
+        position: absolute;
+        top: calc(
+            #{$navHeight} + 0.9rem
+        ); // 60px is the height of the header and nav bar
+        right: 0.5em;
+        display: flex;
+        gap: 1em;
+        flex-flow: column nowrap;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        flex-grow: 0.5;
 
-    .nav-item {
-      overflow: hidden;
-      position: relative;
-      backdrop-filter: blur(5px);
-      background-color: colors.$white-transparent;
-      border-radius: 26px;
-      padding: 8px 14px;
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(-10px);
-      transition: transform 250ms ease-out,
-        opacity 250ms ease-out;
+        .nav-item {
+            overflow: hidden;
+            position: relative;
+            backdrop-filter: blur(5px);
+            background-color: colors.$white-transparent;
+            border-radius: 26px;
+            padding: 8px 14px;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-10px);
+            transition: transform 250ms ease-out, opacity 250ms ease-out;
+        }
+        .nav-item.active {
+            pointer-events: auto;
+            opacity: 1;
+            transform: translateY(0);
+            transition: transform 250ms ease-in, opacity 250ms ease-in;
+        }
     }
-    .nav-item.active {
-      pointer-events: auto;
-      opacity: 1;
-      transform: translateY(0);
-      transition: transform 250ms ease-in,
-        opacity 250ms ease-in;
+    /* Header */
+    #hero {
+        article {
+            max-width: calc(40ch + 1em);
+        }
     }
-  }
-  /* Header */
-  #hero {
-    article {
-      max-width: calc(40ch + 1em);
-    }
-  }
 }

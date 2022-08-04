@@ -1,50 +1,50 @@
-@use "abstracts/colors";
+@use 'abstracts/colors';
 
 #CTA {
-  width: 100%;
-  text-align: center;
-  margin: 2rem 0;
-  line-height: 2;
-  font-size: 1.1em;
-  h2 {
-    font-weight: 700;
-    font-size: 1.2em;
-    color: colors.$dark-gray;
-  }
-  p {
-    color: colors.$lighter-gray;
-    font-weight: 500;
-  }
-  .icon-container {
-    display: flex;
-    width: fit-content;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    gap: 1em;
-  }
-  .icon {
-    cursor: pointer;
-  }
-  svg {
-    color: hsl(0deg, 0%, 35%);
-    width: 2.2rem;
-    height: 2.2rem;
-  }
-  .mail svg {
-    height: 3rem;
-    width: 3rem;
-  }
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+    line-height: 2;
+    font-size: 1.1em;
+    h2 {
+        font-weight: 700;
+        font-size: 1.2em;
+        color: colors.$dark-gray;
+    }
+    p {
+        color: colors.$lighter-gray;
+        font-weight: 500;
+    }
+    .icon-container {
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        gap: 1em;
+    }
+    .icon {
+        cursor: pointer;
+    }
+    svg {
+        color: hsl(0deg, 0%, 35%);
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    .mail svg {
+        height: 3rem;
+        width: 3rem;
+    }
 }
 
 @media only screen and (min-width: 770px) and (orientation: landscape) {
-  #CTA {
-    svg {
-      color: hsl(0deg, 0%, 50%);
-      transition: color 250ms linear;
+    #CTA {
+        svg {
+            color: hsl(0deg, 0%, 50%);
+            transition: color 250ms linear;
+        }
+        .icon:hover svg {
+            color: colors.$lighter-gray;
+        }
     }
-    .icon:hover svg {
-      color: colors.$lighter-gray;
-    }
-  }
 }

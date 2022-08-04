@@ -27,7 +27,8 @@
     height: var(--height);
     border-radius: 4px;
   }
-  .hamburger .bar-wrapper .bar1, .hamburger .bar-wrapper .bar3 {
+  .hamburger .bar-wrapper .bar1,
+.hamburger .bar-wrapper .bar3 {
     width: 60%;
   }
   .hamburger .bar-wrapper .bar1 {

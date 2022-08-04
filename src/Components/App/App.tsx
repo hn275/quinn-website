@@ -5,6 +5,7 @@ import About from 'Components/About/About';
 import Hero from 'Components/Hero/Hero';
 import CTA from 'Components/CTA/CTA';
 import Footer from 'Components/Footer/Footer';
+import Portfolio from 'Components/Portfolio/Portfolio';
 
 function App() {
     return (
@@ -14,6 +15,9 @@ function App() {
             <main>
                 {/* Hero section */}
                 <Hero />
+
+                {/* Portfolio */}
+                <Portfolio />
 
                 {/* CTA */}
                 <CTA />

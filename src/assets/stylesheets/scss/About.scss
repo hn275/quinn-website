@@ -1,40 +1,40 @@
-@use "abstracts/colors";
+@use 'abstracts/colors';
 
 #about {
-  overflow: hidden;
-  height: 100%;
-  h2 {
-    margin-bottom: 0.4em;
-    font-weight: 700;
-    font-size: 1.2em;
-  }
-  img {
-    width: 100%;
-    transform: scale(1.03);
-  }
-  article {
-    padding: 1em;
-  }
+    overflow: hidden;
+    height: 100%;
+    h2 {
+        margin-bottom: 0.4em;
+        font-weight: 700;
+        font-size: 1.2em;
+    }
+    img {
+        width: 100%;
+        transform: scale(1.03);
+    }
+    article {
+        padding: 1em;
+    }
 }
 
 @media only screen and (min-width: 580px) {
-  #about {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    isolation: isolate;
-    article {
-      position: absolute;
-      top: 50%;
-      left: 2em;
-      transform: translateY(-50%);
-      color: colors.$dark-gray;
-      width: 55%;
-      background-color: hsla(0deg, 0%, 100%, 40%);
-      backdrop-filter: blur(5px);
-      border-radius: 15px;
-      box-shadow: 2px 4px 5px hsla(0deg, 0%, 40%, 25%);
+    #about {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        isolation: isolate;
+        article {
+            position: absolute;
+            top: 50%;
+            left: 2em;
+            transform: translateY(-50%);
+            color: colors.$dark-gray;
+            width: 55%;
+            background-color: hsla(0deg, 0%, 100%, 40%);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            box-shadow: 2px 4px 5px hsla(0deg, 0%, 40%, 25%);
+        }
     }
-  }
 }

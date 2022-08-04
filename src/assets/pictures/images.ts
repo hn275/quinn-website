@@ -20,19 +20,8 @@ const images = {
         about: about,
     },
     event1: {
-        vertical: {
-            vert1: e1Vert1,
-            vert2: e1Vert2,
-            vert3: e1Vert3,
-            vert4: e1Vert4,
-        },
-        horizontal: {
-            hor1: e1Hor1,
-            hor2: e1Hor2,
-            hor3: e1Hor3,
-            hor4: e1Hor4,
-            hor5: e1Hor5,
-        },
+        vertical: [e1Vert1, e1Vert2, e1Vert3, e1Vert4],
+        horizontal: [e1Hor1, e1Hor2, e1Hor3, e1Hor4, e1Hor5],
     },
 };
 

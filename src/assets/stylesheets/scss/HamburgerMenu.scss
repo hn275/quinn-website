@@ -1,114 +1,114 @@
-@use "abstracts/colors";
+@use 'abstracts/colors';
 
 .hamburger {
-  display: none;
+    display: none;
 }
 
 @media only screen and (max-width: 480px) {
-  .hamburger {
-    --spacing: 1em;
-    --dimension: 20px;
-    --height: 2px;
+    .hamburger {
+        --spacing: 1em;
+        --dimension: 20px;
+        --height: 2px;
 
-    cursor: pointer;
-    position: relative;
-    width: var(--dimension);
-    height: var(--dimension);
-    display: block;
-    justify-content: center;
-    align-items: center;
+        cursor: pointer;
+        position: relative;
+        width: var(--dimension);
+        height: var(--dimension);
+        display: block;
+        justify-content: center;
+        align-items: center;
 
-    // BARS
-    .bar-wrapper {
-      width: 80%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+        // BARS
+        .bar-wrapper {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
 
-      .bar {
-        background-color: colors.$dark-gray;
-        height: var(--height);
-        border-radius: 4px;
-      }
-      .bar1, .bar3 {
-        width: 60%;
-      }
-      .bar1 {
-        margin-left: auto;
-      }
-      .bar3 {
-        margin-right: auto;
-      }
+            .bar {
+                background-color: colors.$dark-gray;
+                height: var(--height);
+                border-radius: 4px;
+            }
+            .bar1,
+            .bar3 {
+                width: 60%;
+            }
+            .bar1 {
+                margin-left: auto;
+            }
+            .bar3 {
+                margin-right: auto;
+            }
+        }
+        // X
+        .x-wrapper {
+            width: 60%;
+            height: 60%;
+            display: grid;
+            place-items: center;
+            position: absolute;
+            top: 1px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+
+            .stroke {
+                height: var(--height);
+                width: 100%;
+                background-color: colors.$dark-gray;
+                position: absolute;
+                border-radius: 50%;
+            }
+            .stroke1 {
+                transform: rotate(45deg);
+            }
+            .stroke2 {
+                transform: rotate(-45deg);
+            }
+        }
     }
-    // X 
-    .x-wrapper {
-      width: 60%;
-      height: 60%;
-      display: grid;
-      place-items: center;
-      position: absolute;
-      top: 1px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
 
-      .stroke {
-        height: var(--height);
-        width: 100%;
-        background-color: colors.$dark-gray;
-        position: absolute;
-        border-radius: 50%;
-      }
-      .stroke1 {
-        transform: rotate(45deg);
-      }
-      .stroke2 {
-        transform: rotate(-45deg);
-      }
+    // CSSTransition
+    $opacityFade: 0.5;
+    $opacityFocus: 1;
+    .hamburger-bars-enter {
+        opacity: $opacityFade;
+        transform: scale(0.2);
     }
-  }
+    .hamburger-bars-enter-active {
+        opacity: $opacityFocus;
+        transform: scale(1);
+        transition: all 100ms 200ms linear;
+    }
+    .hamburger-bars-exit {
+        opacity: $opacityFocus;
+        transform: scale(1);
+    }
+    .hamburger-bars-exit-active {
+        opacity: $opacityFade;
+        transform: scale(0.2);
+        transition: all 300ms linear;
+    }
 
-  // CSSTransition
-  $opacityFade: 0.5;
-  $opacityFocus: 1;
-  .hamburger-bars-enter {
-    opacity: $opacityFade;
-    transform: scale(0.2);
-  }
-  .hamburger-bars-enter-active {
-    opacity: $opacityFocus;
-    transform: scale(1);
-    transition: all 100ms 200ms linear;
-  }
-  .hamburger-bars-exit {
-    opacity: $opacityFocus;
-    transform: scale(1);
-  }
-  .hamburger-bars-exit-active {
-    opacity: $opacityFade;
-    transform: scale(0.2);
-    transition: all 300ms linear;
-  }
-
-  .hamburger-x-enter {
-    opacity: $opacityFade;
-    transform: scale(0.2);
-  }
-  .hamburger-x-enter-active {
-    opacity: $opacityFocus;
-    transform: scale(1);
-    transition: all 100ms 200ms linear;
-  }
-  .hamburger-x-exit {
-    opacity: $opacityFocus;
-    transform: scale(1);
-  }
-  .hamburger-x-exit-active {
-    opacity: $opacityFade;
-    transform: scale(0.2) ;
-    transition: all 300ms linear;
-  }
+    .hamburger-x-enter {
+        opacity: $opacityFade;
+        transform: scale(0.2);
+    }
+    .hamburger-x-enter-active {
+        opacity: $opacityFocus;
+        transform: scale(1);
+        transition: all 100ms 200ms linear;
+    }
+    .hamburger-x-exit {
+        opacity: $opacityFocus;
+        transform: scale(1);
+    }
+    .hamburger-x-exit-active {
+        opacity: $opacityFade;
+        transform: scale(0.2);
+        transition: all 300ms linear;
+    }
 }
-
