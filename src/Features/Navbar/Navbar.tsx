@@ -41,7 +41,7 @@ const Navbar = (): JSX.Element => {
         <nav className="nav">
             <ul className="nav-links">
                 <li className="nav-item">
-                    <a href="#home" onClick={handleClick}>
+                    <a href="#hero" onClick={handleClick}>
                         <div className="has-focus"></div>
                         Home
                     </a>
