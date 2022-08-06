@@ -15,34 +15,48 @@ const Carousel: React.FC<CarouselPropTypes> = ({ event }): JSX.Element => {
     const [isAutoLooping, setIsAutoLooping] = useState<boolean>(true); // auto looping for carousel
     // handle click events
     const handleNext = (): void => {
-        // setting top level image index
         if (topLevelImageIndex === imagesLength) {
+            // set topLevelImageIndex = 0 if the index is at max length
             setTopLevelImageIndex((currentIndex: number) => {
                 return (currentIndex = 0);
             });
         } else if (
+            // go forward an image
             topLevelImageIndex >= 0 &&
-            topLevelImageIndex <= imagesLength
+            topLevelImageIndex < imagesLength
         ) {
             setTopLevelImageIndex((currentIndex: number) => {
                 return (currentIndex += 1);
             });
         } else {
+            // in case out of range
             throw new Error('Image index out of range');
         }
-        // set autoloop to false
-        setIsAutoLooping(false);
+        // pause autoloop to false
+        setIsAutoLooping(() => false);
     };
     const handlePrev = (): void => {
-        // set top level image index
-        if (topLevelImageIndex > 0) {
-            setTopLevelImageIndex((prevIndex) => (prevIndex -= 1));
+        if (topLevelImageIndex === 0) {
+            // set topLevelImageIndex = imagesLength if the index is at 0
+            setTopLevelImageIndex((currentIndex: number) => {
+                return (currentIndex = imagesLength);
+            });
+        } else if (
+            // go back an image
+            topLevelImageIndex > 0 &&
+            topLevelImageIndex <= imagesLength
+        ) {
+            setTopLevelImageIndex((currentIndex: number) => {
+                return (currentIndex -= 1);
+            });
         } else {
-            setTopLevelImageIndex(imagesLength - 1); // loop forward to the end
+            // in case out of range
+            throw new Error('Image index out of range');
         }
-        // set autoloop to false
-        setIsAutoLooping(false);
+        // pause auto loop
+        setIsAutoLooping(() => false);
     };
+
     // Auto looping every 2 seconds
     useEffect(() => {
         const loopIntervalId = setInterval(() => {
