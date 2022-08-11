@@ -65,6 +65,7 @@ const Carousel: React.FC<CarouselPropTypes> = ({ event }): JSX.Element => {
         return () => {
             clearInterval(loopIntervalId);
         };
+        /* eslint-disable */
     }, [isAutoLooping]);
     // Resume auto looping once the user click on next/prev button after 5
     useEffect(() => {
