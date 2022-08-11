@@ -171,7 +171,6 @@ nav {
     #hero {
         display: grid;
         place-items: center;
-        height: calc(100vh - $navHeight);
         position: relative;
         grid-template-columns: 1fr 60%; // TODO: change this for the bigger screen size
         grid-template-areas: 'text hero';
@@ -184,19 +183,23 @@ nav {
         }
     }
     .hero-picture {
+        position: relative;
+
+        bottom: -10px;
+        z-index: -1;
         grid-area: hero;
-        width: 100%;
-        height: auto;
+        height: 100%;
         overflow: hidden;
         img {
             width: 100%;
-            border-radius: 0px 160px 160px 0px; // NOTE: delete to show quinn square design
+            border-radius: 0px 160px 0px 0px; // NOTE: delete to show quinn square design
         }
     }
     article {
         grid-area: text;
         max-width: 45ch;
-        margin-left: 2em !important;
+        margin: 0 2em !important;
+        /* margin-left: 2em !important; */
     }
 }
 
