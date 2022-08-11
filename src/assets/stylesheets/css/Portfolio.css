@@ -24,7 +24,7 @@
 #portfolio .carousel {
   width: 100%;
   position: relative;
-  height: 50vh;
+  height: 70vh;
   /* overflow: hidden; */
 }
 #portfolio .carousel-image {
@@ -81,24 +81,24 @@
 }
 
 @media only screen and (max-width: 375px) {
-  .carousel-image {
+  .carousel {
     max-height: 250px;
   }
 }
 @media only screen and (max-width: 414px) {
-  .carousel-image {
+  .carousel {
     max-height: 280px;
   }
 }
 @media only screen and (max-width: 430px) {
-  .carousel-image {
+  .carousel {
     max-height: 285px;
   }
 }
 @media only screen and (min-width: 990px) {
-  .carousel-image {
+  .carousel {
     height: 80vh;
-    max-height: 900px;
+    /* max-height: 900px; */
   }
 }
 
