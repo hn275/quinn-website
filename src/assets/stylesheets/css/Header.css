@@ -249,6 +249,7 @@ nav .nav-links {
   /* Header */
   #hero article {
     max-width: calc(40ch + 1em);
+    width: 100vw;
   }
 }
 

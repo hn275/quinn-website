@@ -1,17 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 
+html {
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding: 80px;
+}
 .App {
     font-family: 'Montserrat', sans-serif;
     width: 100%;
     line-height: 1.4;
     font-size: 18px; // NOTE: holy mother of god root font size
-    scroll-behavior: smooth;
     top: 80px;
     margin: 0;
     padding: 0;
+    /* overflow-x: hidden; */
 }
 
 @media only screen and (max-width: 480px) {
+    html {
+        scroll-padding: 50px;
+    }
     .App {
         font-size: 15px;
     }
