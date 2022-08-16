@@ -143,10 +143,12 @@ nav {
         grid-template-areas: 'text hero';
         .right-chev {
             display: inline-block;
-            transition: all 200ms 100ms ease-out;
+            transition: all 300ms 100ms ease-out;
+            position: relative;
+            left: 1px;
         }
         .portfolio-link:hover .right-chev {
-            transform: translateX(6px);
+            transform: rotate(90deg) translateY(-5px) translateX(2px);
         }
     }
     .hero-picture {
