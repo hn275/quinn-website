@@ -5,7 +5,7 @@ import 'assets/stylesheets/css/Header.css';
 const Hero = (): JSX.Element => {
     // codes
     return (
-        <section id="hero">
+        <section id="home">
             <div className="hero-picture">
                 <img src={images.stocks.hero} alt="Quinn" />
             </div>

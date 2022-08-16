@@ -7,7 +7,7 @@ import 'assets/stylesheets/css/Header.css';
 
 const Header = (): JSX.Element => {
     return (
-        <header id="home">
+        <header>
             <div className="logo">
                 <Logo />
             </div>
